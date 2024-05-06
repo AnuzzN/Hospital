@@ -1,0 +1,23 @@
+<html>
+    <head>
+    </head>
+    <body><center>
+        <h1>View status</h1>
+        <table border='2'>
+            <tr>
+                <th>Name</th>
+                <th>Specialisation</th>
+                <th>Visiting time</th>
+            </tr>
+            
+                {% for i in data %}
+            <tr>
+                <td>{{i.fname}}</td>
+                <td>{{i.Specialisation}}</td>
+                <td>{{i.visitingtime}}</td>
+                 <td><a href="{% url 'update' varb=i.id %}">update</a> </td>
+                 <td><a href="{% url 'delete' varb=i.id %}">delete</a> </td>
+            </tr>
+            {% endfor %}
+        </table>
+        </html>

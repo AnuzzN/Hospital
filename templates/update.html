@@ -1,0 +1,16 @@
+
+        <html>
+            <head>
+            </head>
+            <body>
+                <form method='POST'>{% csrf_token %}
+                    <label for="Name"> Name</label>
+                    <input type="text" name="Name"  placeholder="Enter your name" value="{{data.Name}}" >
+                        <br><br><label for="Specialisation" >Specialisation</label>
+                        <input type="text" name="Specialisation" value="{{data.Specialisation}}"  >
+                        <br><br><label for="visitingtime" >Visitingtime</label>
+                        <input type="text" name="visitingtime" value="{{data.visitingtime}}">
+                       <br><br> <input type="submit" value="update">
+                </form>
+            </body>
+            </html>     
